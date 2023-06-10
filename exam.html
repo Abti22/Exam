@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>أدخل الاسم</title>
+</head>
+
+   
+ <script type="text/javascript">
+  function displayInput() {
+   var name = document.getElementById("name").value;
+   document.getElementById("output").innerHTML = "اسمك هو: " + name;
+   document.getElementById("inputForm").style.display = "none";
+   document.getElementById("options").style.display = "block";
+  }
+
+  function resetForm() {
+   document.getElementById("inputForm").reset();
+   document.getElementById("output").innerHTML = "";
+   document.getElementById("inputForm").style.display = "block";
+   document.getElementById("options").style.display = "none";
+  }
+
+  function closePage() {
+   window.close();
+  }
+ </script>
+</head>
+<body>
+    
+<div id="inputForm">
+ <label for="name">الاسم:</label>
+ <input type="text" id="name" name="name"><br><br>
+ <button onclick="displayInput()">عرض الاسم</button>
+</div>
+
+<div id="output"></div>
+
+<div id="options" style="display:none;">
+ <button onclick="resetForm()">ادخال اسم جديد</button>
+ <button onclick="closePage()">توقف واغلاق الصفحة</button>
+</div>
+
+</body>
+</html>
+    
+</body>
+</html>
